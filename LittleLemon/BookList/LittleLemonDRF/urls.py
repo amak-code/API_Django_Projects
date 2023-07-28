@@ -4,5 +4,8 @@ from . import views
 # urlpatterns = [path('hello/', views.hello_world, name='hello_world'),
 # ]
 
-urlpatterns = [path('numbers/', views.display_even_nums),
+urlpatterns = [
+    # path('books/', views.books)
+    path("books", views.BookList.as_view()),
+    path("books/<int:pk>", views.Book.as_view()),
 ]
